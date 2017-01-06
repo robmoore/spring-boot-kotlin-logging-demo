@@ -1,6 +1,6 @@
 package hello
 
-import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -16,9 +16,8 @@ class ApplicationTests {
     lateinit var restTemplate: TestRestTemplate
 
     @Test
-    fun findAll() {
-        val content = """[{"firstName":"Jack","lastName":"Bauer","id":1},{"firstName":"Chloe","lastName":"O'Brian","id":2},{"firstName":"Kim","lastName":"Bauer","id":3},{"firstName":"David","lastName":"Palmer","id":4},{"firstName":"Michelle","lastName":"Dessler","id":5}]"""
-        assertEquals(content, restTemplate.getForEntity("/", String::class.java).body)
+    fun fetchQuote() {
+        assertNotNull(restTemplate.getForEntity("/quote", String::class.java).body)
     }
 
 }
