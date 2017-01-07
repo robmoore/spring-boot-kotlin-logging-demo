@@ -5,6 +5,8 @@
             <pattern>[%thread] %-5level %logger{32} - %msg%n</pattern>
         </encoder>
     </appender>
+    <logger name="hello" level="DEBUG"/>
+    <logger name="org.springframework.retry.support.RetryTemplate" level="DEBUG"/>
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
     </root>

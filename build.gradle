@@ -31,10 +31,12 @@ repositories {
 }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.8.4")
+    compile('com.fasterxml.jackson.module:jackson-module-kotlin:2.8.4')
     compile('io.github.microutils:kotlin-logging:1.4.1')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-aop')
+    compile('org.springframework.retry:spring-retry')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
