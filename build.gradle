@@ -40,3 +40,7 @@ dependencies {
     compile('org.springframework.retry:spring-retry')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
